@@ -4,7 +4,8 @@
   "description": "Examples from Clean Code Classes",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/MiqueiasMaia/cleanCode_refactoring/issues"
   },
-  "homepage": "https://github.com/MiqueiasMaia/cleanCode_refactoring#readme"
+  "homepage": "https://github.com/MiqueiasMaia/cleanCode_refactoring#readme",
+  "devDependencies": {
+    "jest": "^27.5.0"
+  }
 }
