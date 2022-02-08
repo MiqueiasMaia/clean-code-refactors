@@ -7,7 +7,7 @@ exports.calc = function (dist, d) {
         if (d.getDay() === 0) {
             return dist * 2.90;
         } else {
-            return dist * 3.90;
+            return dist * 2.10;
         }
 
     }
