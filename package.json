@@ -1,0 +1,22 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "description": "Examples from Clean Code Classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiqueiasMaia/cleanCode_refactoring.git"
+  },
+  "keywords": [
+    "refactor"
+  ],
+  "author": "Miqueias Maia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MiqueiasMaia/cleanCode_refactoring/issues"
+  },
+  "homepage": "https://github.com/MiqueiasMaia/cleanCode_refactoring#readme"
+}
