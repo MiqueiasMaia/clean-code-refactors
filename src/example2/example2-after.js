@@ -1,16 +1,16 @@
 const [FACTOR_DIGIT_1, FACTOR_DIGIT_2] = [10, 11];
 
-exports.validate = function (cpfRaw) {
+const validate = (cpfRaw) => {
     if (!cpfRaw) return false;
     const cpf = cpfCleaner(cpfRaw);
     if (!cpfSizeValidator(cpf)) return false;
-    if (!cpfEqualsDigitsValidator(cpf)) return false;
+    if (cpfEqualsDigitsValidator(cpf)) return false;
     const digit1 = calculateDigit(cpf, FACTOR_DIGIT_1);
     const digit2 = calculateDigit(cpf, FACTOR_DIGIT_2);
     const actualDigit = extractActualDigit(cpf);
     const calculatedDigit = `${digit1}${digit2}`;
     return actualDigit === calculatedDigit;
-}
+};
 
 const cpfCleaner = (rawCpf) => {
     return rawCpf.replace(/[\.\-]*/g, "");
@@ -37,4 +37,8 @@ const calculateDigit = (cpf, factor) => {
 
 const extractActualDigit = (cpf) => {
     return cpf.slice(9);
-}
+};
+
+module.exports = {
+    validate
+};
