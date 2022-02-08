@@ -2,11 +2,7 @@ exports.validate = function (str) {
     if (str !== null) {
         if (str !== undefined) {
             if (str.length >= 11 || str.length <= 14) {
-                str = str
-                    .replace('.', '')
-                    .replace('.', '')
-                    .replace('-', '')
-                    .replace(" ", "");
+                str = str.replace(/[\.\-]*/g, "");
                 if (!str.split("").every(c => c === str[0])) {
                     try {
                         let d1, d2;
